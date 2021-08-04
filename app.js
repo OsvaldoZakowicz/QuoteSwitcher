@@ -4,6 +4,8 @@ let indexSelectedQuote = 0;
 const authorsList = document.querySelectorAll('.author-btn');
 /* lista de citas */
 const quotesList = document.querySelectorAll('.quote');
+/* lista de items */
+const itemList = document.querySelectorAll('.item');
 
 /* agregar eventos */
 authorsList.forEach((author)=>{
@@ -32,8 +34,10 @@ function showQuote(indexSelectedAuthor) {
     //autor elegido !== cita visible => hacer visible la cita
     authorsList[indexSelectedQuote].classList.toggle('author-btn-dimmed');
     quotesList[indexSelectedQuote].classList.toggle('quote-hidden');
+    itemList[indexSelectedQuote].classList.toggle('item-disable');
     authorsList[indexSelectedAuthor].classList.toggle('author-btn-dimmed');
     quotesList[indexSelectedAuthor].classList.toggle('quote-hidden');
+    itemList[indexSelectedAuthor].classList.toggle('item-disable');
     //actualizar el index
     indexSelectedQuote = indexSelectedAuthor; 
   }
