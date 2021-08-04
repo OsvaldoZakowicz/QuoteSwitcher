@@ -1,0 +1,96 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* colors */
+:root {
+  --color-black: #353535;
+  --color-blue: #284b63;
+  --color-silver: #d9d9d9;
+  --color-green: #3c6e71;
+  --color-white: #ffffff; 
+}
+
+/* conteedor de autor y frase */
+.switcher {
+  width: 600px;
+  max-width: 700px;
+  height: 500px;
+  margin: 0 auto;
+  font-family: 'PT Sans', sans-serif;
+  border-radius: 8px;
+  border: 1px solid var(--color-silver);
+  background-color: var(--color-silver);
+}
+
+/* boton de autor */
+.author-btn {
+  width: 5.5rem;
+  height: 5.5rem;
+  overflow: hidden;
+  margin: 1rem;
+  padding: 0.02rem;
+  border-radius: 50%;
+  border: 0.125rem solid var(--color-silver);
+  transition: opacity 0.2s ease-out;
+}
+
+/* boton de autor, focus */
+.author-btn:focus {
+  opacity: 1;
+  outline: 0;
+}
+
+/* boton de autor atenuado */
+.autor-btn-dimmed {
+  opacity: 0.5;
+}
+
+/* la imagen debe ocupar todo el espacio del boton */
+.btn-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.authors {
+  height: 30%;
+}
+
+.quotes {
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quotes-hidden {
+  display: none;
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote-text, .quote-author {
+  width: 90%;
+}
+
+.quote-text blockquote {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.quote-text blockquote p {
+  margin: 1rem 0;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.quote-author p {
+  margin: 1rem 0;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
