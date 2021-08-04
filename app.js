@@ -30,7 +30,9 @@ function showQuote(indexSelectedAuthor) {
     return;
   } else {
     //autor elegido !== cita visible => hacer visible la cita
+    authorsList[indexSelectedQuote].classList.toggle('author-btn-dimmed');
     quotesList[indexSelectedQuote].classList.toggle('quote-hidden');
+    authorsList[indexSelectedAuthor].classList.toggle('author-btn-dimmed');
     quotesList[indexSelectedAuthor].classList.toggle('quote-hidden');
     //actualizar el index
     indexSelectedQuote = indexSelectedAuthor; 
