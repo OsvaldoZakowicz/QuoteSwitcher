@@ -1,5 +1,5 @@
 /* Font */
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Open+Sans+Condensed:wght@300&display=swap');
 
 /* colors */
 :root {
@@ -14,12 +14,18 @@
 .switcher {
   width: 600px;
   max-width: 700px;
-  height: 500px;
+  height: 400px;
   margin: 0 auto;
-  font-family: 'PT Sans', sans-serif;
   border-radius: 8px;
-  border: 1px solid var(--color-silver);
-  background-color: var(--color-silver);
+  border: 1px solid var(--color-black);
+  background-color: var(--color-black);
+}
+
+.authors {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1.8rem;
 }
 
 /* boton de autor */
@@ -27,10 +33,9 @@
   width: 5.5rem;
   height: 5.5rem;
   overflow: hidden;
-  margin: 1rem;
   padding: 0.02rem;
   border-radius: 50%;
-  border: 0.125rem solid var(--color-silver);
+  border: 0.2rem solid var(--color-silver);
   transition: opacity 0.2s ease-out;
 }
 
@@ -38,10 +43,11 @@
 .author-btn:focus {
   opacity: 1;
   outline: 0;
+  border: 0.2rem solid var(--color-blue);
 }
 
 /* boton de autor atenuado */
-.autor-btn-dimmed {
+.author-btn-dimmed {
   opacity: 0.5;
 }
 
@@ -63,34 +69,39 @@
   align-items: center;
 }
 
-.quotes-hidden {
+.quote-hidden {
   display: none;
 }
 
 .quote {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.quote-text, .quote-author {
-  width: 90%;
+  margin: 0 1.8rem;
 }
 
 .quote-text blockquote {
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 .quote-text blockquote p {
   margin: 1rem 0;
   font-weight: 400;
+  text-align: center;
   font-style: italic;
+  font-family: 'Dancing Script', cursive;
+  color: var(--color-silver);
+}
+
+.quote-text blockquote p::first-letter {
+  font-size: 3rem;
+  color: var(--color-blue);
 }
 
 .quote-author p {
-  margin: 1rem 0;
-  font-size: 1.3rem;
+  margin: 1rem 2rem 0 0;
+  font-size: 1.2rem;
+  text-align: end;
   text-transform: uppercase;
+  font-weight: 300;
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: var(--color-silver);
 }
